@@ -1,0 +1,35 @@
+<div class="table-wrap">
+    <table>
+        <thead [resizeColumns]="true">
+            <tr>
+                <th class="ada-th-filler">FI</th>
+                <th class="ada-th-filler">FI</th>
+                <th class="ada-th-filler">FI</th>
+                <th
+                    *ngFor="let c of displayedColumns; let i = index"
+                    class="ada-th"
+                >
+                    {{c}}
+                </th>
+                <th class="ada-th-actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let r of displayedRows">
+                <tr>
+                    <td class="filler">FI</td>
+                    <td class="filler">FI</td>
+                    <td class="filler">FI</td>
+                    <td *ngFor="let c of displayedColumns">{{r[c]}}</td>
+                    <td class="ada-td-actions">FI</td>
+                </tr>
+                <!-- <tr class="expandable">
+                    <td>
+                        <div>HI</div>
+                    </td>
+                </tr> -->
+            </ng-container>
+        </tbody>
+    </table>
+    <div class="table-footer"></div>
+</div>
